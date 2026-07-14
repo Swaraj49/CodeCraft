@@ -1,0 +1,136 @@
+/* ============================================================
+   CodeCraft Design System — VS Code Flat Theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ---------- Dark Theme (default) ---------- */
+:root,
+[data-theme="dark"] {
+  --bg-primary:    #1e1e1e;
+  --bg-secondary:  #252526;
+  --bg-tertiary:   #2d2d30;
+  --bg-hover:      #2a2d2e;
+  --bg-input:      #3c3c3c;
+  --bg-navbar:     #323233;
+  --bg-sidebar:    #252526;
+  --bg-panel:      #1e1e1e;
+  --bg-card:       #252526;
+
+  --text-primary:   #cccccc;
+  --text-secondary: #9d9d9d;
+  --text-muted:     #858585;
+  --text-heading:   #ffffff;
+  --text-on-accent: #000000;
+
+  --accent:         rgb(183, 208, 247);
+  --accent-hover:   rgb(145, 184, 247);
+  --accent-subtle:  rgba(78, 201, 176, 0.15);
+
+  --border:         #3c3c3c;
+  --border-focus:   #4ec9b0;
+
+  --warning-bg:     #3a1010;
+  --warning-border: #5a2020;
+  --warning-text:   #f48771;
+
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+}
+
+/* ---------- Light Theme ---------- */
+[data-theme="light"] {
+  --bg-primary:    #ffffff;
+  --bg-secondary:  #f3f3f3;
+  --bg-tertiary:   #e8e8e8;
+  --bg-hover:      #e8e8e8;
+  --bg-input:      #ffffff;
+  --bg-navbar:     #dddddd;
+  --bg-sidebar:    #f3f3f3;
+  --bg-panel:      #ffffff;
+  --bg-card:       #f3f3f3;
+
+  --text-primary:   #333333;
+  --text-secondary: #616161;
+  --text-muted:     #999999;
+  --text-heading:   #000000;
+  --text-on-accent: #ffffff;
+
+  --accent:         #007acc;
+  --accent-hover:   #005fa3;
+  --accent-subtle:  rgba(0, 122, 204, 0.12);
+
+  --border:         #e0e0e0;
+  --border-focus:   #007acc;
+
+  --warning-bg:     #fff3cd;
+  --warning-border: #f5c842;
+  --warning-text:   #7d4e00;
+
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+}
+
+/* ---------- Global Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: var(--text-heading);
+  line-height: 1.2;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: var(--accent-subtle);
+}
+
+/* ---------- Focus ---------- */
+:focus-visible {
+  outline: 1px solid var(--border-focus);
+  outline-offset: 1px;
+}

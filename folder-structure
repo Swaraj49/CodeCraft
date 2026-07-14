@@ -1,0 +1,34 @@
+realtime-code-editor/
+├── client/                 # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── socket.js       # Socket.io client setup
+│   └── package.json
+│
+├── server/                 # Node.js backend
+│   ├── index.js            # Entry point
+│   ├── socket/
+│   │   └── handlers.js     # All socket event handlers
+│   ├── routes/
+│   │   └── snippet.js      # Public snippet sharing API
+│   ├── models/
+│   │   └── Snippet.js      # MongoDB schema
+│   └── package.json
+│
+├── docker-compose.yml
+├── Dockerfile.server
+└── .env
+
+
+client
+    src/
+    ├── pages/
+    │   ├── Home.jsx       # Enter username + room ID → join room
+    │   └── Editor.jsx     # Main code editor page
+    ├── components/
+    │   ├── CodeEditor.jsx # Monaco editor wrapper
+    │   └── UserList.jsx   # Shows who's in the room
+    ├── socket.js
+    ├── App.jsx
+    └── main.jsx
